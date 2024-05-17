@@ -1,0 +1,26 @@
+{
+  "name": "reqproxy",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js",
+    "start:zipkin": "docker run -d -p 9411:9411 openzipkin/zipkin"
+  },
+  "keywords": [],
+  "author": "kuccello@gmail.com",
+  "license": "ISC",
+  "description": "An experimental reverse proxy with Zipkin tracing",
+  "devDependencies": {
+    "@types/http-proxy": "^1.17.14",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "http-proxy": "^1.18.1",
+    "zipkin": "^0.22.0",
+    "zipkin-transport-http": "^0.22.0"
+  }
+}
